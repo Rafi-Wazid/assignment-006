@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .lexend-font {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+    }
+    </style>
 </head>
-<body>
-    
+<body class="lexend-font">
+    <header>
+        <div class="navbar bg-base-100 mx-auto">
+            <div class="navbar-start">
+              <div class="">
+                <a class="btn bg-lime-300 px-8">Blog</a>
+              </div>
+            </div>
+            <div class="navbar-center">
+              <div class="flex items-center space-x-4">
+                <img class="max-md:hidden" src="images/logo.png" alt="">
+                <p class="font-bold text-sm text-center">Donate<br> Bangladesh</p>
+              </div>
+            </div>
+            <div class="navbar-end flex space-x-1">
+                <img src="images/coin.png" alt="">
+                <p class="font-semibold">5000 BDT</p><span></span>
+            </div>
+          </div>
+    </header>
+
+    <main class="">
+        <div class="">
+            <button class="btn">Donation</button>
+            <button class="btn">History</button>
+        </div>
+        <div>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
