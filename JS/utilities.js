@@ -6,6 +6,7 @@ function showSectionById(id){
 }
 
 
+
 function getInputFieldValueById(id){
     const inputValue = document.getElementById(id).value;
     const inputNumber = parseFloat(inputValue);
@@ -17,3 +18,6 @@ function textFieldValueById(id){
     const textNumber = parseFloat(textValue);
     return textNumber;
 }
+
+
+

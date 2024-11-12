@@ -15,6 +15,9 @@
       font-family: "Lexend", sans-serif;
       font-optical-sizing: auto;
     }
+    .active-tab {
+    background-color: #A3E635; /* Brighter lime color */
+  }
   </style>
 </head>
 <body class="lexend-font bg-white">
@@ -34,15 +37,15 @@
       </div>
       <div class="navbar-end flex space-x-1">
         <img src="images/coin.png" alt="">
-        <p class="font-semibold"><span id="account-balance">5000</span> BDT</p><span></span>
+        <p class="font-semibold"><span id="account-balance">7000</span> BDT</p><span></span>
       </div>
     </div>
   </header>
   <!-- tab buttons -->
   <div class="flex justify-center sticky top-0 bg-white/70 backdrop-blur-md z-10">
     <div class="space-x-8 my-7">
-      <button id="donation-tab-btn" class="btn bg-lime-300">Donation</button>
-      <button id="history-tab-btn" class="btn bg-lime-300">History</button>
+      <button id="donation-tab-btn" class="tab-btn btn ">Donation</button>
+      <button id="history-tab-btn" class="tab-btn btn ">History</button>
     </div>
   </div>
   <main class="flex flex-col min-h-screen">
@@ -61,7 +64,7 @@
           <div class="card-body">
             <div class="flex items-center mb-2">
               <img class="mr-3" src="images/coin.png" alt="">
-              <span class="text-gray-700 font-bold">500 BDT</span>
+              <span class="text-gray-700 font-bold"><span id="total-funds">10500</span> BDT</span>
             </div>
             <h2 class="card-title text-2xl font-bold mb-2">Donate for Flood at Noakhali, Bangladesh</h2>
             <p class="text-gray-600 mb-4">
@@ -70,11 +73,22 @@
             </p>
             <div class="form-control">
               <input id="input-money" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-4">
-              <button id="btn-donate" class="btn bg-[#B4F461] text-black font-bold w-full">Donate Now</button>
+              <button id="donate-btn" class="btn bg-[#B4F461] text-black font-bold w-full">Donate Now</button>
             </div>
           </div>
         </div>
       </div>
+      <!-- modal section start  -->
+     <!-- Confirmation Modal -->
+        <dialog id="my_modal_1" class="modal">
+          <div class="modal-box text-center">
+            <h3 class="text-2xl font-bold py-4">Congrats!</h3>
+            <img src="images/coin.png" alt="Money Icon" class="mx-auto w-8 h-8 mb-2">
+            <p class="py-4">You have successfully donated for humankind!</p>
+            <button class="btn" onclick="my_modal_1.close()">Close Confirmation</button>
+          </div>
+        </dialog>
+      <!-- modal section ends  -->
       <!-- Card 2 -->
       <div class="w-full max-w-2xl p-4 bg-white rounded-lg">
         <div class="card lg:flex lg:space-x-4 shadow-lg">
@@ -84,7 +98,7 @@
           <div class="card-body">
             <div class="flex items-center mb-2">
               <img class="mr-3" src="images/coin.png" alt="">
-              <span class="text-gray-700 font-bold">600 BDT</span>
+              <span class="text-gray-700 font-bold">12900 BDT</span>
             </div>
             <h2 class="card-title text-2xl font-bold mb-2">Donate for Flood Relief in Feni,Bangladesh</h2>
             <p class="text-gray-600 mb-4">
@@ -110,7 +124,7 @@
           <div class="card-body">
             <div class="flex items-center mb-2">
               <img class="mr-3" src="images/coin.png" alt="">
-              <span class="text-gray-700 font-bold">1000 BDT</span>
+              <span class="text-gray-700 font-bold">21000 BDT</span>
             </div>
             <h2 class="card-title text-2xl font-bold mb-2">Aid for Injured in the Quota Movement</h2>
             <p class="text-gray-600 mb-4">
@@ -130,16 +144,14 @@
       </div>
     </div>
   </section>
-  <section id="history-section" class="flex-grow">
+  <section id="history-section" class="flex-grow hidden">
     <!---------- History page section -------->
     <div class="">
       <h3 class="text-center my-10 font-bold text-gray-500"> -> Donation details and time given below <- </h3>
-          <div class="flex flex-col space-y-6 items-center">
-            <div class="mx-10 border w-full max-w-2xl p-4 space-y-2">
-              <h4 class="font-semibold text-gray-700">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h4>
-              <p class="text-sm text-gray-500">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
-            </div>
-          </div>
+          <!-- transaction container -->
+           <div id="transaction-container">
+
+           </div>
     </div>
   </section>
   </main>
