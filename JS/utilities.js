@@ -5,6 +5,18 @@ function showSectionById(id){
     document.getElementById(id).classList.remove('hidden');
 }
 
+document.getElementById('donation-tab-btn')
+        .addEventListener('click', function(){{
+        showSectionById('donation-section');   
+                
+}})
+
+
+document.getElementById('history-tab-btn')
+        .addEventListener('click' , function(){
+        showSectionById('history-section');
+})
+
 
 
 function getInputFieldValueById(id){

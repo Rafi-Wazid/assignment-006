@@ -1,17 +1,4 @@
 
-document.getElementById('donation-tab-btn')
-        .addEventListener('click', function(){{
-        showSectionById('donation-section');   
-                
-}})
-
-
-document.getElementById('history-tab-btn')
-        .addEventListener('click' , function(){
-        showSectionById('history-section');
-})
-
-
 const donationTabBtn = document.getElementById('donation-tab-btn');
 const historyTabBtn = document.getElementById('history-tab-btn');
 
